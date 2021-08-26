@@ -21,8 +21,8 @@
         <br><br>
 
         <button @click="min1+=1; sec1 =0">+1</button>
-        <button @click="min1+=5; sec1 =0">+5</button>
-        <button @click="min1+=10; sec1 =0">+10</button>
+        <button @click="min1+=5; sec1 =0">5</button>
+        <button @click="min1+=10; sec1 =0">10</button>
 
         <br>
         <button v-on:click="start1" v-if="!timer1On">Start</button>
@@ -47,8 +47,8 @@
         <br><br>
 
         <button @click="min2+=1; sec1 =0">+1</button>
-        <button @click="min2+=5; sec1 =0">+5</button>
-        <button @click="min2+=10; sec1 =0">+10</button>
+        <button @click="min2+=5; sec1 =0">5</button>
+        <button @click="min2+=10; sec1 =0">10</button>
 
         <br>
         <button v-on:click="start2" v-if="!timer2On">Start</button>
@@ -72,8 +72,8 @@
         <br><br>
 
         <button @click="min3+=1; sec1 =0">+1</button>
-        <button @click="min3+=5; sec1 =0">+5</button>
-        <button @click="min3+=10; sec1 =0">+10</button>
+        <button @click="min3+=5; sec1 =0">5</button>
+        <button @click="min3+=10; sec1 =0">10</button>
 
         <br>
         <button v-on:click="start3" v-if="!timer3On">Start</button>

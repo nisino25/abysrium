@@ -1,7 +1,6 @@
 <template>
-  <div>
-      <h3>Timer</h3>
-
+  <div class="timer">
+    <h3>Timer</h3>
 
     <div class="container">
 
@@ -84,23 +83,25 @@
       </div>
     </div>
 
-
-    
-    <br>
-    
   </div>
   
   <hr>
 
-  <!-- <div id="timer">
-    <div class="timer">
-      <div class="time">
-        {{ formatTime }}
-      </div>
-      <button v-on:click="start" v-if="!timerOn">Start</button>
-      <button v-on:click="stop" v-if="timerOn">Stop</button>
+  <div class="to-do-lis">
+
+    <div class="navbar">
+      <ul>
+        <li @click="showingPage= 'Abyss'" :class="[showingPage === 'Abyss' ? 'Abyss' : '']"><a class="active" href="#home">Abyss</a></li>
+        <li @click="showingPage= 'Fresh' " :class="[showingPage === 'Fresh' ? 'Fresh' : '']" ><a href="#news">Fresh</a></li>
+        <li @click="showingPage= 'Hallow'" :class="[showingPage === 'Hallow' ? 'Hallow' : '']"><a href="#contact">Halloween</a></li>
+        <li @click="showingPage= 'Anni'" :class="[showingPage === 'Anni' ? 'Anni' : '']"><a href="#contact">Annivdersary</a></li>
+        <li @click="showingPage= 'Chris'" :class="[showingPage === 'Chris' ? 'Chris' : '']"><a href="#contact">Christmas</a></li>
+        <li style="float:right"><a href="#about">Other</a></li>
+      </ul>
+
     </div>
-  </div> -->
+
+  </div>
 
   
   
@@ -118,6 +119,8 @@ export default {
         email: '',
         password: ''
       },
+
+      showingPage: 'Abyss',
 
       
 
@@ -322,4 +325,57 @@ export default {
 .container strong{
   margin-right: 10px;
 }
+
+.navbar ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar li{
+  float: left;
+  border-right:1px solid #bbb;
+  transition: background-color 1s ease;
+}
+
+.navbar li:last-child {
+  border-right: none;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.navbar .Abyss {
+  background-color: 	dodgerblue;
+}
+
+.navbar .Fresh {
+  background-color: 	mediumaquamarine;
+}
+
+.navbar .Hallow {
+  background-color: 	slateblue;
+}
+
+.navbar .Anni {
+  background-color: 	lightskyblue;
+}
+
+.navbar .Chris {
+  background-color: 	crimson;
+}
+
+
+
 </style>

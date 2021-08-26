@@ -91,11 +91,11 @@
 
     <div class="navbar">
       <ul>
-        <li @click="showingPage= 'Abyss'" :class="[showingPage === 'Abyss' ? 'Abyss' : '']"><a class="active" href="#home">Abyss</a></li>
-        <li @click="showingPage= 'Fresh' " :class="[showingPage === 'Fresh' ? 'Fresh' : '']" ><a href="#news">Fresh</a></li>
-        <li @click="showingPage= 'Hallow'" :class="[showingPage === 'Hallow' ? 'Hallow' : '']"><a href="#contact">Halloween</a></li>
-        <li @click="showingPage= 'Anni'" :class="[showingPage === 'Anni' ? 'Anni' : '']"><a href="#contact">Annivdersary</a></li>
-        <li @click="showingPage= 'Chris'" :class="[showingPage === 'Chris' ? 'Chris' : '']"><a href="#contact">Christmas</a></li>
+        <li @click="showingPage= 'Abyss'" :class="[showingPage === 'Abyss' ? 'Abyss' : '']"><a >Abyss</a></li>
+        <li @click="showingPage= 'Fresh' " :class="[showingPage === 'Fresh' ? 'Fresh' : '']" ><a >Fresh</a></li>
+        <li @click="showingPage= 'Hallow'" :class="[showingPage === 'Hallow' ? 'Hallow' : '']"><a >Halloween</a></li>
+        <li @click="showingPage= 'Anni'" :class="[showingPage === 'Anni' ? 'Anni' : '']"><a >Annivdersary</a></li>
+        <li @click="showingPage= 'Chris'" :class="[showingPage === 'Chris' ? 'Chris' : '']"><a >Christmas</a></li>
         <li style="float:right"><a href="#about">Other</a></li>
       </ul>
 
@@ -332,6 +332,7 @@ export default {
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  font-size: 80%;
 }
 
 .navbar li{

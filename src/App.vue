@@ -353,9 +353,9 @@ export default {
   text-decoration: none;
 }
 
-.navbar li a:hover:not(.active) {
+/* .navbar li a:hover:not(.active) {
   background-color: #111;
-}
+} */
 
 .navbar .Abyss {
   background-color: 	dodgerblue;

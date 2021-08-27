@@ -15,7 +15,7 @@
         <button @click="editingNow1 = false"  v-if="editingNow1">Finish edit</button>
 
         <br><br>
-        <span>{{ formatTime1 }}</span>
+        <span :style="{border: borderColor1}">{{ formatTime1 }}</span>
 
         <br><br>
 
@@ -41,7 +41,7 @@
         <button @click="editingNow2 = false"  v-if="editingNow2">Finish edit</button>
         
         <br><br>
-        <span>{{ formatTime2 }}</span>
+        <span :style="{border: borderColor2}">{{ formatTime2 }}</span>
         
         <br><br>
 
@@ -66,7 +66,7 @@
         <button @click="editingNow3 = false"  v-if="editingNow3">Finish edit</button>
         
         <br><br>
-        <span>{{ formatTime3 }}</span>
+        <span :style="{border: borderColor3}">{{ formatTime3 }}</span>
         
         <br><br>
 
@@ -141,6 +141,7 @@ export default {
       sec1: 0,
       timer1On: false,
       timer1Obj: null,
+      borderColor1: 'solid 3px black',
 
       editingNow2: false,
       title2: 'Timer 2',
@@ -148,6 +149,7 @@ export default {
       sec2: 0,
       timer2On: false,
       timer2Obj: null,
+      borderColor2: 'solid 3px black',
 
       editingNow3: false,
       title3: 'Timer 3',
@@ -155,6 +157,7 @@ export default {
       sec3: 0,
       timer3On: false,
       timer3Obj: null,
+      borderColor3: 'solid 3px black',
       
     }
   },
@@ -182,9 +185,11 @@ export default {
     stop1: function() {
       clearInterval(this.timer1Obj);
       this.timer1On = false
+      this.borderColor1 = 'solid 3px black';
     },
 
     complete1: function() {
+      this.borderColor1 = 'solid 3px red';
       clearInterval(this.timer1Obj)
     },
 
@@ -210,9 +215,11 @@ export default {
     stop2: function() {
       clearInterval(this.timer2Obj);
       this.timer2On = false
+      this.borderColor2 = 'solid 3px black';
     },
 
     complete2: function() {
+      this.borderColor2 = 'solid 3px red';
       clearInterval(this.timer2Obj)
     },
 
@@ -238,19 +245,18 @@ export default {
     stop3: function() {
       clearInterval(this.timer3Obj);
       this.timer3On = false
+      this.borderColor3 = 'solid 3px black';
     },
 
     complete3: function() {
+      this.borderColor1 = 'solid 3px red';
       clearInterval(this.timer3Obj)
     },
   
   
-
-
   },
 
   computed: {
-
 
     formatTime1: function() {
       let timeStrings1 = [
@@ -258,6 +264,7 @@ export default {
         this.sec1.toString()
       ].map(function(str) {
         if (str.length < 2) {
+          // this.borderColor1 = 'solid 3px orange';
           return "0" + str
         } else {
           return str
@@ -272,6 +279,7 @@ export default {
         this.sec2.toString()
       ].map(function(str) {
         if (str.length < 2) {
+          // this.borderColor2 = 'solid 3px orange';
           return "0" + str
         } else {
           return str
@@ -286,6 +294,7 @@ export default {
         this.sec3.toString()
       ].map(function(str) {
         if (str.length < 2) {
+          // this.borderColor3 = 'solid 3px orange';
           return "0" + str
         } else {
           return str
@@ -323,6 +332,10 @@ export default {
     /* margin: 5em 5em; */
     font-weight: bold;
     border: solid 3px #000000;
+}
+
+.yellow-border{
+  border: solid 3px #000000;
 }
 
 .container strong{

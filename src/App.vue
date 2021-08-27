@@ -96,6 +96,7 @@
         <li @click="showingPage= 'Hallow'" :class="[showingPage === 'Hallow' ? 'Hallow' : '']"><a >Halloween</a></li>
         <li @click="showingPage= 'Anni'" :class="[showingPage === 'Anni' ? 'Anni' : '']"><a >Annivdersary</a></li>
         <li @click="showingPage= 'Chris'" :class="[showingPage === 'Chris' ? 'Chris' : '']"><a >Christmas</a></li>
+        <li @click="showingPage= 'pubg'" :class="[showingPage === 'pubg' ? 'pubg' : '']"><a >Pubg</a></li>
         <li style="float:right"><a href="#about">Other</a></li>
       </ul>
 
@@ -306,6 +307,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 15px;
+  touch-action: manipulation;
+
 }
 
 .container {
@@ -332,7 +335,7 @@ export default {
   padding: 0;
   overflow: hidden;
   background-color: #333;
-  font-size: 80%;
+  font-size: 50%;
 }
 
 .navbar li{
@@ -376,6 +379,11 @@ export default {
 .navbar .Chris {
   background-color: 	crimson;
 }
+
+.navbar .pubg {
+  background-color: 	coral;
+}
+
 
 
 
